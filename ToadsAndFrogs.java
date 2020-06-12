@@ -1,5 +1,18 @@
 //This is terribly-designed code for the beginning of a software-engineering project.
 // Author: Kyle Burke <paithanq@gmail.com>
+
+/* 
+Basic Cleanup Tasks:  If you're not sure about any of these, please come ask Kyle!
+  * Fix Indentation/line breaks.  (I recommend 4 spaces, especially since I will be reading your code.)
+  * Proper case styling (capitalization).  
+  * Use meaningful variable/method names.
+  * Remove duplicated data.  (There's a very obvious example here.)
+  
+Advanced cleanup: (consider these if you finish the others)
+  * Choose between Fields vs. local variables.
+  * Remove unneccessary Code.  
+  * Start considering adding other classes... :)
+*/
 import javafx.application.Application;
 import javafx.geometry.*;
 import javafx.embed.swing.*;
@@ -62,7 +75,8 @@ Stage lightedStage;
     
     for (int josh = 0; josh < 10; josh++) {
         String cheese = BoxesOfTheBoard[josh];
-        Button pane = new Button(cheese);
+        Button pane = this.getButton();
+        pane.setText(cheese);
         v.getChildren().add(pane);
         if (cheese.equals("Toad")) {
             monkeyFace(pane, josh);
